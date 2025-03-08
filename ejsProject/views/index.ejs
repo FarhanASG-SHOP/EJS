@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS View</title>
+</head>
+<body>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+   </header>
+   <main>
+<form action="/" method="post">
+    <input type="text" placeholder="Programming Languages" name="language"/>
+
+    <button type="submit">Add </button>
+</form>
+
+<div>
+    <ul>
+        <% if(languages.length > 0){ %>
+           <%  languages.map((lang)=> { %>
+            <li><%= lang %></li>
+       <% }) %>  
+        <% } else{ %>
+            <p>No Data Found</p>
+       <%  } %>
+    </ul>
+  
+</div>
+   </main>
+   <footer>
+    <p>All rights reserved by &copy; ASG SHOP  </p>
+   </footer>
+
+</body>
+</html>
